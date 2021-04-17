@@ -26,7 +26,7 @@ public class StoreAppSighUpTest extends TestBase {
         };
     }
 
-    @Test(dataProvider = "signUpTestData", priority = 1)
+    @Test(dataProvider = "signUpTestData", priority = 1, groups = {"regression","smoke"})
     public void signUpTest(String firstName, String lastName, String password, String day, String month, String year,
                            String address, String city, String state, String postcode, String mobileNumber){
 
@@ -58,7 +58,7 @@ public class StoreAppSighUpTest extends TestBase {
         Assert.assertEquals(actualTitle, expectedTitle,"Actual title: "+actualTitle+" didn't match with expected title: "+expectedTitle);
     }
 
-    @Test(priority=2)
+    @Test(priority=2, groups = {"regression", "smoke"})
     public void signInTest(){
 
         StoreAppHomePage storeAppHomePage = new StoreAppHomePage();

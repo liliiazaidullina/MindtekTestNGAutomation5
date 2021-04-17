@@ -14,7 +14,7 @@ import java.util.List;
 public class BlazeDemoPriceTest extends TestBase {
 
     //This test will verify that all flight prices are below $1000
-    @Test
+    @Test(groups ={"regression", "smoke"})
     public void priceTest(){
         BlazeDemoHomepage blazeDemoHomepage = new BlazeDemoHomepage();
         BlazeDemoFlightsPage blazeDemoFlightsPage = new BlazeDemoFlightsPage();

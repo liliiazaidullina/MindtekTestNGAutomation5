@@ -8,21 +8,17 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class BlazeDemoFlightsPage {
+public class SaucedemoHomePage {
 
-    public BlazeDemoFlightsPage() {
+    public SaucedemoHomePage(){
         WebDriver driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
-
     }
+    @FindBy(xpath = "//select[@class='product_sort_container']")
+    public WebElement filterDropdown;
 
-    @FindBy(xpath = "//table[@class='table']//td[6]")
+    @FindBy(xpath = "//div[@class='inventory_item_price']")
     public List<WebElement> prices;
-
-    @FindBy(xpath="//table[@class='table']//td[1]")
-    public List<WebElement> chooseFlight;
-
-
 
 
 }

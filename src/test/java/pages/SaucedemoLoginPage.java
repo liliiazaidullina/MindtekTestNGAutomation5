@@ -6,22 +6,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import java.util.List;
-
-public class BlazeDemoFlightsPage {
-
-    public BlazeDemoFlightsPage() {
+public class SaucedemoLoginPage {
+    public SaucedemoLoginPage(){
         WebDriver driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
-
     }
 
-    @FindBy(xpath = "//table[@class='table']//td[6]")
-    public List<WebElement> prices;
+    @FindBy(id = "user-name")
+    public WebElement username;
 
-    @FindBy(xpath="//table[@class='table']//td[1]")
-    public List<WebElement> chooseFlight;
+    @FindBy(id = "password")
+    public WebElement password;
 
+    @FindBy(id="login-button")
+    public WebElement loginButton;
 
 
 

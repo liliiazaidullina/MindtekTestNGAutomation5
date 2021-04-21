@@ -43,7 +43,7 @@ public class BlazeDemoBookFlight extends TestBase {
         BrowserUtils.selectDropdownByValue(blazeDemoHomepage.destinationCity, flightTo);
         blazeDemoHomepage.findFlightsButton.click();
         List<WebElement> price = blazeDemoFlightsPage.prices;
-
+        driver.findElement(By.cssSelector("*[type='submit']"));
         for(int i=0; i<price.size();i++){
         double tempPrice = Double.parseDouble(blazeDemoFlightsPage.prices.get(i).getText()
                     .replaceAll("\\$",""));

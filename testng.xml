@@ -1,16 +1,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name ="MindtekTestNGAutomation">
     <test name="Automating UI">
+        <parameter name="username" value="problem_user"></parameter>
+        <parameter name="password" value="secret_sauce"></parameter>
+
         <groups>
             <run>
                 <include name="regression"></include>
             </run>
         </groups>
         <classes>
-            <class name="tests.BlazeDemoTest"></class>
-            <class name="tests.BlazeDemoPriceTest"></class>
-            <class name="tests.SaucedemoAppTest"></class>
-            <class name="tests.StoreAppSighUpTest"></class>
+<!--            <class name="tests.BlazeDemoTest"></class>-->
+<!--            <class name="tests.BlazeDemoPriceTest"></class>-->
+<!--            <class name="tests.SaucedemoAppTest"></class>-->
+<!--            <class name="tests.StoreAppSighUpTest"></class>-->
+                <class name="tests.SaucedemoProblemUserTest"></class>
         </classes>
 
     </test>
